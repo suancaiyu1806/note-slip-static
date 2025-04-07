@@ -1,8 +1,7 @@
 const CACHE_NAME = 'note-slip-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  // 添加其他需要缓存的资源
+  './',
+  './index.html',
 ];
 
 self.addEventListener('install', event => {
