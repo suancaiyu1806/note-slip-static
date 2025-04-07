@@ -1,0 +1,1 @@
+const n="note-slip-cache-v1",s=["/","/index.html"];self.addEventListener("install",e=>{e.waitUntil(caches.open(n).then(t=>t.addAll(s)))});self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(t=>t||fetch(e.request)))});self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(t=>Promise.all(t.filter(a=>a!==n).map(a=>caches.delete(a)))))});
